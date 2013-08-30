@@ -5,6 +5,8 @@ gem 'pg', '0.12.2'
 gem 'bootstrap-sass', '2.3.2.0'
 
 
+
+
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
 end
@@ -18,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.0.2'
+gem 'devise'
 
 group :test do
   gem 'capybara', '1.1.2'
