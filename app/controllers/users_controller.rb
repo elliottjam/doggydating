@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
   before_filter :signed_in_user, only: [:index, :edit, :update]
+
   def show
     @user = User.find(params[:id])
   end
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "Welcome to Doggy Dating!"
-        redirect_to users_path
+        redirect_to @user
       else
         render 'new'
     end

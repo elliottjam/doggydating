@@ -1,0 +1,24 @@
+<% provide(:title, @dog.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+  <!-- dog image -->
+  <strong>Name:</strong>
+  <%= @dog.name.upcase %><br>
+  <strong>Breed:</strong>
+  <%= @dog.breed_id %><br>
+  <strong>Size:</strong>
+  <%= @dog.size %><br>
+  <strong>Gender:</strong>
+  <%= @dog.gender %><br>
+  <strong>Age:</strong>
+  <%= @dog.age %><br>
+  <strong>Favorite toy:</strong>
+  <%= @dog.toy %>
+    </section>
+  </aside>
+</div>
+<%= link_to 'Edit', edit_dog_path %> |
+<%= link_to "Back", dogs_path %> |
+<%= link_to "Register New Dog", new_dog_path %>

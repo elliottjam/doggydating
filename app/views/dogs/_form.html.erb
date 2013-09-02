@@ -1,0 +1,33 @@
+<%= form_for @dog do |f| %>
+  <% if @dog.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@dog.errors.count, "error") %> prohibited this post form being saved:</h2>
+      <ul>
+        <% @dog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :breed_id, "Breed" %>
+  <%= f.select :breed_id, "#" %>
+
+  <%= f.label :size, "Size" %>
+  <%= f.select :size, %w(small medium large), include_blank: true %>
+
+
+  <%= f.label :gender, "Gender" %>
+  <%= f.select :gender, %w(male female), include_blank: true %>
+
+  <%= f.label :age, "Age" %>
+  <%= f.text_field :age %>
+
+  <%= f.label :toy, "Favourite toy" %>
+  <%= f.text_field :toy %>
+
+  <%= f.submit "Update my dog!" %>
+<% end %>

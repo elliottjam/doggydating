@@ -1,0 +1,46 @@
+<h1>Search</h1>
+
+<%= form_tag({url: search_index_path}, method: :get) do %>
+
+
+  <%= label_tag :size, "Size" %>
+  <%= select_tag :size, options_for_select(%w(small medium large), params[:size]), include_blank: true %>
+
+
+  <%= label_tag :gender, "Gender" %>
+  <%= select_tag :gender, options_for_select(%w(male female), params[:gender]), include_blank: true %>
+
+  <%= submit_tag "search for dogs!" %>
+
+
+
+
+  <% if @dogs %>
+<h1>Listing Dogs</h1>
+<% if @dogs.any? %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Toy</th>
+    <th>Show</th>
+  </tr>
+
+  <% @dogs.each do |dog| %>
+    <tr>
+      <td><%= dog.name %></td>
+      <td><%= dog.age %></td>
+      <td><%= dog.toy %></td>
+      <td><%= link_to 'Show', dog %></td>
+    </tr>
+  <% end %>
+</table>
+<%else%>
+no dogs matched your search
+
+<%end%>
+
+  <% end %>
+
+
+<% end %>
