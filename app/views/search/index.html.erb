@@ -11,7 +11,7 @@
   <%= select_tag :gender, options_for_select(%w(male female), params[:gender]), include_blank: true %>
 
   <%= label_tag :breed_id, "Breed" %>
-  <%= select_tag :breed_id, options_for_select(%w(daschund terrier bulldog), params[:breed_id]), include_blank: true %>
+  <%= select_tag :breed_id, options_for_select(@breeds.map{|b| [b.name, b.id]}, params[:breed_id]), include_blank: true %>
 
 
   <%= submit_tag "search for dogs!" %>

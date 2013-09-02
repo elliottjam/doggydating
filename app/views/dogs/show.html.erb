@@ -7,7 +7,7 @@
   <strong>Name:</strong>
   <%= @dog.name %><br>
   <strong>Breed:</strong>
-  <%= @dog.breed_id %><br>
+  <%= @dog.breed.try(:name) %><br>
   <strong>Size:</strong>
   <%= @dog.size %><br>
   <strong>Gender:</strong>

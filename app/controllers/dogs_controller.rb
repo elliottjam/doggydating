@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+  before_filter :setup_form_variables
 
   def new
     @dog = Dog.new
@@ -36,5 +37,11 @@ class DogsController < ApplicationController
       render 'edit'
     end
   end
+
+  private
+  def setup_form_variables
+    @breeds = Breed.all
+  end
+
 
 end

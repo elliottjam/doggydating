@@ -2,6 +2,8 @@ class SearchController < ApplicationController
 
   def index
 
+    @breeds = Breed.all
+
     if params[:commit]
       search_sql = []
       search_params = {}
@@ -18,7 +20,7 @@ class SearchController < ApplicationController
 
       if params[:breed_id] > ""
         search_sql <<"dogs.breed_id = :breed_id"
-        search_params[:gender] = params[:gender]
+        search_params[:breed_id] = params[:breed_id]
       end
 
       @dogs = Dog.where(search_sql.join(' and '), search_params)
