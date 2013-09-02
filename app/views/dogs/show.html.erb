@@ -5,7 +5,7 @@
       <h1>
   <!-- dog image -->
   <strong>Name:</strong>
-  <%= @dog.name.upcase %><br>
+  <%= @dog.name %><br>
   <strong>Breed:</strong>
   <%= @dog.breed_id %><br>
   <strong>Size:</strong>
@@ -21,4 +21,4 @@
 </div>
 <%= link_to 'Edit', edit_dog_path %> |
 <%= link_to "Back", dogs_path %> |
-<%= link_to "Register New Dog", new_dog_path %>
+<%= link_to "New Dog", new_dog_path %>

@@ -2,6 +2,8 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Gender</th>
+    <th>Breed</th>
     <th>Age</th>
     <th>Toy</th>
     <th>Show</th>
@@ -11,6 +13,8 @@
   <% @dogs.each do |dog| %>
     <tr>
       <td><%= dog.name %></td>
+      <td><%= dog.gender %></td>
+      <td><%= dog.breed_id %></td>
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
       <td><%= link_to 'Show', dog %></td>
@@ -18,4 +22,4 @@
     </tr>
   <% end %>
 </table>
-<%= link_to "Register New Dog", new_dog_path %> | <%= link_to 'Back', dogs_path %>
+<%= link_to "New Dog", new_dog_path %>

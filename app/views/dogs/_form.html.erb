@@ -14,7 +14,7 @@
   <%= f.text_field :name %>
 
   <%= f.label :breed_id, "Breed" %>
-  <%= f.select :breed_id, "#" %>
+  <%= f.select :breed_id, %w(daschund terrier bulldog), include_blank: true %>
 
   <%= f.label :size, "Size" %>
   <%= f.select :size, %w(small medium large), include_blank: true %>

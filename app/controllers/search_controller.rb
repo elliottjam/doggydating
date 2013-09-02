@@ -16,6 +16,11 @@ class SearchController < ApplicationController
         search_params[:gender] = params[:gender]
       end
 
+      if params[:breed_id] > ""
+        search_sql <<"dogs.breed_id = :breed_id"
+        search_params[:gender] = params[:gender]
+      end
+
       @dogs = Dog.where(search_sql.join(' and '), search_params)
 
 
