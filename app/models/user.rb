@@ -13,6 +13,6 @@ class User < ActiveRecord::Base
   validates_presence_of :username
 
   def role?(role)
-    self.role == role
+    roles.include? role.to_s
   end
 end

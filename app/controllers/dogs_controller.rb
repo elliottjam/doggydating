@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+  load_and_authorize resource
   before_filter :setup_form_variables
 
   def new
