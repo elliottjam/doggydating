@@ -1,5 +1,8 @@
 <h1>Search</h1>
 
+
+<div class="row">
+  <div class="span6 offset3">
 <%= form_tag({url: search_index_path}, method: :get) do %>
 
 
@@ -15,6 +18,8 @@
 
 
   <%= submit_tag "search for dogs!" %>
+   </div>
+</div>
 
 
 
@@ -24,6 +29,7 @@
 <% if @dogs.any? %>
 <table>
   <tr>
+    <th>Picture</th>
     <th>Name</th>
     <th>Age</th>
     <th>Toy</th>
@@ -32,6 +38,7 @@
 
   <% @dogs.each do |dog| %>
     <tr>
+      <td><%= image_tag dog.avatar.thumb.url %></td>
       <td><%= dog.name %></td>
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>

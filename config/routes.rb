@@ -3,12 +3,14 @@ Doggydating::Application.routes.draw do
   # devise_for :users do
   #   get 'users', :to => 'users#show', :as => :user_root
   # end
-  resources :users
+
   resources :dogs
 
   resources :search, only: [:index]
 
   root  to: 'static_pages#home'
+  get '/profile', to: 'users#show', as: :profile
+
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'

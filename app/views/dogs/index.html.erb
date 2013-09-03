@@ -1,9 +1,11 @@
 <h1>Listing Dogs</h1>
 <table>
   <tr>
+    <th>Picture</th>
     <th>Name</th>
     <th>Gender</th>
     <th>Breed</th>
+    <th>Size</th>
     <th>Age</th>
     <th>Toy</th>
     <th>Show</th>
@@ -12,9 +14,11 @@
 
   <% @dogs.each do |dog| %>
     <tr>
+      <td><%= image_tag dog.avatar.thumb.url %></td>
       <td><%= dog.name %></td>
       <td><%= dog.gender %></td>
-      <td><%= dog.breed_id %></td>
+      <td><%= dog.breed.try(:name) %></td>
+      <td><%= dog.size %></td>
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
       <td><%= link_to 'Show', dog %></td>

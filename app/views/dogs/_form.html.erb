@@ -13,6 +13,10 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%=f.label :Picture %>
+  <%=f.file_field :avatar %>
+
+
   <%= f.label :breed_id, "Breed" %>
   <%= f.select :breed_id, @breeds.map{|b| [b.name, b.id]}, include_blank: true %>
 
@@ -29,5 +33,5 @@
   <%= f.label :toy, "Favourite toy" %>
   <%= f.text_field :toy %>
 
-  <%= f.submit "Update my dog!" %>
+  <%= f.submit "That's my dog!" %>
 <% end %>
