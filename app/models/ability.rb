@@ -1,22 +1,18 @@
 class Ability
   include CanCan::Ability
 
-#   def initialize(user)
-#     user||=User.new
-#     if user.role? :admin
-#         can :manage, :all
-#     else
-#         can :read, User
-#     end
-#   end
-# end
-
   def initialize(user)
-    user ||= User.new # guest user
+    if user
+      can :read, Dog
 
-    if user.role? :admin
-      can :manage, :all
+      can :manage, Dog do |dog|
+        dog.user == user
+      end
+
     else
-    can :read, :all
+      # put permissions here for non-logged-in users (if you want them to do anything :-)
+    end
   end
 end
+
+
