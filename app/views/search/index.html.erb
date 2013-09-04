@@ -1,4 +1,4 @@
-<h1>Search</h1>
+<h1>Dog Search</h1>
 
 
 <div class="row">
@@ -22,7 +22,7 @@
 </div>
 
   <% if @dogs %>
-<h1>Listing Dogs</h1>
+<h1>Dog Show</h1>
 <% if @dogs.any? %>
 <table class="table table-striped table-bordered table-condensed">
   <tr>
@@ -32,7 +32,8 @@
     <th>Breed</th>
     <th>Size</th>
     <th>Age</th>
-    <th>Toy</th>
+    <th>Favorite Toy</th>
+    <th>Owner</th>
     <th>Show</th>
     <th>Contact Request</th>
   </tr>
@@ -46,9 +47,9 @@
       <td><%= dog.size %></td>
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
+      <td><%= dog.user.username %></td>
       <td><%= link_to 'Show', dog %></td>
       <td><%= link_to 'Contact Owner', user_contact_request_path(dog.user.id), method: :post %></td>
-
     </tr>
   <% end %>
 </table>

@@ -17,10 +17,13 @@
   <strong>Age:</strong>
   <%= @dog.age %><br>
   <strong>Favorite toy:</strong>
-  <%= @dog.toy %>
+  <%= @dog.toy %><br>
+  <strong>Owner:</strong>
+  <%= @dog.user.username %>
     </section>
   </aside>
 </div>
+<td><%= link_to 'Contact Owner', user_contact_request_path(@dog), method: :post %></td> |
 <%= link_to 'Edit', edit_dog_path %> |
 <%= link_to "Back", dogs_path %> |
 <%= link_to "New Dog", new_dog_path %>

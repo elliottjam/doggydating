@@ -10,7 +10,11 @@ Doggydating::Application.routes.draw do
 
   resources :dogs
   resources :search, only: [:index]
-
+  resources :contact_requests, only: [] do
+    post "/reject", to: "contact_requests#reject", on: :member
+    post "/accept", to: "contact_requests#accept", on: :member
+    post "/cancel", to: "contact_requests#cancel", on: :member
+  end
   root  to: 'static_pages#home'
   get '/profile', to: 'users#show', as: :profile
 

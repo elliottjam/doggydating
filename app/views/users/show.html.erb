@@ -25,8 +25,8 @@
     <th>Status</th>
     <th>From</th>
     <th>Date</th>
-    <th>Confirm</th>
-    <th>Reject</th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @incoming_requests.each do |request| %>
@@ -34,8 +34,8 @@
       <td><%= request.status %></td>
       <td><%= request.from.username %></td>
       <td><%= request.created_at %></td>
-      <td><%= link_to 'Reject', "#" %></td>
-      <td><%= link_to 'Accept', "#" %></td>
+      <td><%= link_to "Reject", reject_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
+      <td><%= link_to "Accept", accept_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
     </tr>
     <% end %>
 </table>
@@ -56,7 +56,7 @@
       <td><%= request.status %></td>
       <td><%= request.to.username %></td>
       <td><%= request.created_at %></td>
-      <td><%= link_to 'Cancel', "#" %></td>
+      <td><%= link_to 'Cancel', cancel_contact_request_path(request), method: :destroy, class: "btn btn-primary"  %></td>
     </tr>
     <% end %>
 </table>

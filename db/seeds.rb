@@ -43,13 +43,13 @@ dogs = Dog.create! ([
   name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: User.first.id, avatar: File.new("db/fixtures/coolbru.jpg")
   },
   {
-  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.first.id, avatar:  File.new("db/fixtures/monocledog.jpg")
+  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.last.id, avatar:  File.new("db/fixtures/monocledog.jpg")
   },
   {
-  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/husky.jpg")
+  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.last.id, avatar: File.new("db/fixtures/husky.jpg")
   },
   {
-  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/wassup.jpeg")
+  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.last.id, avatar: File.new("db/fixtures/wassup.jpeg")
   },
 ])
 
