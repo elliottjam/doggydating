@@ -43,16 +43,13 @@ dogs = Dog.create! ([
   name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: User.first.id, avatar: File.new("db/fixtures/coolbru.jpg")
   },
   {
-  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.first.id, avatar:  File.new("db/fixtures/coolbru.jpg")
+  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.first.id, avatar:  File.new("db/fixtures/monocledog.jpg")
   },
   {
-  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
+  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/husky.jpg")
   },
   {
-  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
-  },
-  {
-  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
+  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/wassup.jpeg")
   },
 ])
 

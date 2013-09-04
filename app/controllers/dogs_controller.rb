@@ -41,6 +41,12 @@ class DogsController < ApplicationController
     end
   end
 
+    def destroy
+      @dog = Dog.find(params[:id])
+      @dog.destroy
+      redirect_to dogs_path , confirm: "Are you sure?"
+    end
+
   private
   def setup_form_variables
     @breeds = Breed.all
