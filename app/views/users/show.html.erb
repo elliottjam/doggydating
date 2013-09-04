@@ -18,3 +18,46 @@
   </aside>
 </div>
 
+<div>
+  <h1>Incoming Requests</h1>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Status</th>
+    <th>From</th>
+    <th>Date</th>
+    <th>Confirm</th>
+    <th>Reject</th>
+  </tr>
+
+<% @incoming_requests.each do |request| %>
+    <tr>
+      <td><%= request.status %></td>
+      <td><%= request.from.username %></td>
+      <td><%= request.created_at %></td>
+      <td><%= link_to 'Reject', "#" %></td>
+      <td><%= link_to 'Accept', "#" %></td>
+    </tr>
+    <% end %>
+</table>
+</div>
+
+<div>
+  <h1>Outgoing Requests</h1>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Status</th>
+    <th>To</th>
+    <th>Date</th>
+    <th>Cancel</th>
+  </tr>
+
+<% @outgoing_requests.each do |request| %>
+    <tr>
+      <td><%= request.status %></td>
+      <td><%= request.to.username %></td>
+      <td><%= request.created_at %></td>
+      <td><%= link_to 'Cancel', "#" %></td>
+    </tr>
+    <% end %>
+</table>
+</div>

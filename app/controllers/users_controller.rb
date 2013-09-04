@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @incoming_requests = ContactRequest.where(to_id: current_user.id)
+    @outgoing_requests = ContactRequest.where(from_id: current_user.id)
   end
+
+
 
 end

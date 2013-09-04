@@ -16,7 +16,7 @@ class ContactRequestsController < ApplicationController
   end
 
   def index
-    @contactrequest = current_user.dogs
+    @contactrequest = current_user.contactrequest
   end
 
   end
