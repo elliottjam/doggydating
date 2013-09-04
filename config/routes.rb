@@ -1,5 +1,5 @@
 Doggydating::Application.routes.draw do
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks:"omniauth_callbacks"}
   # devise_for :users do
   #   get 'users', :to => 'users#show', :as => :user_root
   # end
