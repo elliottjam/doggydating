@@ -4,8 +4,11 @@ Doggydating::Application.routes.draw do
   #   get 'users', :to => 'users#show', :as => :user_root
   # end
 
-  resources :dogs
+  resources :users, only: [] do
+    post "contact_request", to: "contact_requests#create"
+  end
 
+  resources :dogs
   resources :search, only: [:index]
 
   root  to: 'static_pages#home'

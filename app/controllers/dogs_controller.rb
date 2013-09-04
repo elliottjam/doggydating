@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   before_filter :authenticate_user!
-  load_and_authorize_resource
+  # load_and_authorize_resource
+#  authorize users to create dogs
 
   before_filter :setup_form_variables
 

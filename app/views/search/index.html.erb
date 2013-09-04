@@ -47,7 +47,7 @@
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
       <td><%= link_to 'Show', dog %></td>
-      <td><%= link_to 'Contact Owner', "#" %></td>
+      <td><%= link_to 'Contact Owner', user_contact_request_path(dog.user.id), method: :post %></td>
 
     </tr>
   <% end %>

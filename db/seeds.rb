@@ -15,7 +15,7 @@ User.destroy_all
 Breed.destroy_all
 Dog.destroy_all
 
-users = User.create! ([
+users = User.create!([
   {
     first_name: "James", last_name: "Elliott", email: "elliottjam@gmail.com", username: "elliottjam", password: "password", password_confirmation: "password"
   },
