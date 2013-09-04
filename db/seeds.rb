@@ -17,17 +17,11 @@ Dog.destroy_all
 
 users = User.create! ([
   {
-    first_name: "James", last_name: "Elliott", email: "elliott@gmail.com", username: "DoggyDaddy", password: "Password", password_confirmation: "Password"
+    first_name: "James", last_name: "Elliott", email: "elliottjam@gmail.com", username: "elliottjam", password: "password", password_confirmation: "password"
   },
   {
-    first_name: "Joe", last_name: "Blow", email: "joeblow@gmail.com", username: "JB", password: "Password", password_confirmation: "Password"
-  },
-  {
-    first_name: "Janice", last_name: "Jenkins", email: "janice@gmail.com", username: "Dogmom", password: "Password", password_confirmation: "Password"
- },
-{
-    first_name: "Jocelyn", last_name: "Jeffery", email: "jocelyn@gmail.com", username: "pupqueen", password: "Password", password_confirmation: "Password"
-}
+    first_name: "Joe", last_name: "Blow", email: "joeblow@gmail.com", username: "jb", password: "password", password_confirmation: "password"
+  }
  ])
 
 # dogs = Dog.create([
@@ -43,8 +37,23 @@ end
 
 dogs = Dog.create! ([
 {
+  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/britbulldog.jpeg")
+  },
+{
+  name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: User.first.id, avatar: File.new("db/fixtures/coolbru.jpg")
+  },
+  {
+  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.first.id, avatar:  File.new("db/fixtures/coolbru.jpg")
+  },
+  {
   name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
-  }
+  },
+  {
+  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
+  },
+  {
+  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: "frenchbulldog.jpeg"
+  },
 ])
 
 # breeds = Breed.create! ([

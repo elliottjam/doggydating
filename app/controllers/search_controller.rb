@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
-before_filter :authenticate_user!
+  before_filter :authenticate_user!
+
   def index
 
     @breeds = Breed.all
