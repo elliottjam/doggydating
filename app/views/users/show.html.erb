@@ -1,11 +1,11 @@
-<% provide(:title, @user.username) %>
+<% provide(:title, @user.username.upcase) %>
 <div class="row">
   <aside class="span5">
     <section>
       <h1>
         <%= gravatar_for @user %>
           Username:
-        <%= @user.username %><br>
+        "<%= @user.username.upcase %>"<br>
           <strong>Name:</strong>
         <%= @user.first_name %>
         <%= @user.last_name %><br>
@@ -16,8 +16,44 @@
       </h1>
     </section>
   </aside>
+</div>
+
+ <h1><%= @user.username.upcase %>'s Dogs</h1>
+<table class="table table-striped table-bordered table-condensed">
+   <tr>
+    <th>Picture</th>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Breed</th>
+    <th>Size</th>
+    <th>Age</th>
+    <th>Toy</th>
+    <th>Show</th>
+  </tr>
 
   <% @user.dogs.each do |dog| %>
-    <%= link_to dog.name, dog %>
+    <tr>
+      <td><%= image_tag dog.avatar.thumb.url %></td>
+      <td><%= dog.name %></td>
+      <td><%= dog.gender %></td>
+      <td><%= dog.breed.try(:name) %></td>
+      <td><%= dog.size %></td>
+      <td><%= dog.age %></td>
+      <td><%= dog.toy %></td>
+      <td><%= link_to 'Show', dog %></td>
+    </tr>
   <% end %>
-</div>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+

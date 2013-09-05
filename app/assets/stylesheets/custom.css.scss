@@ -175,3 +175,19 @@ input {
 }
 
 
+body {
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    background-size: 100% 100%;
+    background-image: image-url("rollingfields.jpg") !important;
+    min-height: 1200px;
+}
+
+#content {
+  background: #fff;
+  opacity: 0.97;
+  padding: 20px;
+  border-radius: 5px;
+}
+
