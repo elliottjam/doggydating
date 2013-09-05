@@ -29,7 +29,7 @@
     <th>Accept</th>
   </tr>
 
-<% @incoming_requests.each do |request| %>
+  <% @incoming_requests.each do |request| %>
     <tr>
       <td><%= request.status %></td>
       <td><%= request.from.username.upcase %></td>
@@ -37,7 +37,7 @@
       <td><%= link_to "Reject", reject_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
       <td><%= link_to "Accept", accept_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
     </tr>
-    <% end %>
+    <% end unless @incoming_requests.nil?  %>
 </table>
 </div>
 
@@ -51,7 +51,7 @@
     <th>Cancel</th>
   </tr>
 
-<% @outgoing_requests.each do |request| %>
+  <% @outgoing_requests.each do |request| %>
     <tr>
       <td><%= request.status %></td>
       <td><%= request.to.username.upcase %></td>
@@ -62,7 +62,7 @@
       <td><%= link_to 'Cancel', cancel_contact_request_path(request), method: :destroy, class: "btn btn-primary"  %></td>
         <% end %>
     </tr>
-    <% end %>
+    <% end unless @outgoing_requests.nil? %>
 </table>
 </div>
 
@@ -77,7 +77,7 @@
     <th>Show User Profile</th>
   </tr>
 
-<% @accepted_requests.each do |request| %>
+  <% @accepted_requests.each do |request| %>
     <tr>
       <td><%= request.to.username.upcase %></td>
       <td><%= request.to.email %></td>
@@ -86,7 +86,7 @@
       <% other = (request.from == current_user ? request.to : request.from)  %>
       <td><%= link_to 'Show User Profile', user_path(other), class: "btn btn-primary"  %></td>
     </tr>
-    <% end %>
+    <% end unless @accepted_requests.nil? %>
 </table>
 </div>
 
