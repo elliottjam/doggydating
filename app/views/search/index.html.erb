@@ -17,7 +17,7 @@
   <%= select_tag :breed_id, options_for_select(@breeds.map{|b| [b.name, b.id]}, params[:breed_id]), include_blank: true %>
 
 
-  <%= submit_tag "search for dogs!" %>
+  <%= submit_tag "search for dogs!", class: "btn btn-primary"   %>
    </div>
 </div>
 
@@ -48,7 +48,7 @@
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
       <td><%= dog.user.username.upcase %></td>
-      <td><%= link_to 'Show', dog %></td>
+      <td><%= link_to 'Show', dog, class: "btn btn-primary"  %></td>
       <td><%= link_to 'Contact Owner', user_contact_request_path(dog.user.id), remote: true, method: :post, class: "request_#{dog.user.id}" %></td>
     </tr>
   <% end %>

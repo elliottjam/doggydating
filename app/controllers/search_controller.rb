@@ -24,7 +24,7 @@ class SearchController < ApplicationController
         search_params[:breed_id] = params[:breed_id]
       end
 
-      @dogs = Dog.where(search_sql.join(' and '), search_params)
+      @dogs = Dog.where(search_sql.join(' and '), search_params).where('user_id != ?', current_user.id)
 
 
 

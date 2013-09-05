@@ -1,0 +1,99 @@
+<% provide(:title, @user.username) %>
+<div class="row">
+  <aside class="span5">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+          Username:
+        <%= @user.username %><br>
+          <strong>Name:</strong>
+        <%= @user.first_name %>
+        <%= @user.last_name %><br>
+          <strong>Email:</strong>
+        <%= @user.email %><br>
+        <strong>Number of Dogs:</strong>
+        <%= @user.dogs.count %><br>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<div>
+  <h1>Recieved Requests</h1>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Status</th>
+    <th>From</th>
+    <th>Date Sent</th>
+    <th>Reject</th>
+    <th>Accept</th>
+  </tr>
+
+<% @incoming_requests.each do |request| %>
+    <tr>
+      <td><%= request.status %></td>
+      <td><%= request.from.username.upcase %></td>
+      <td><%= request.created_at %></td>
+      <td><%= link_to "Reject", reject_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
+      <td><%= link_to "Accept", accept_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
+    </tr>
+    <% end %>
+</table>
+</div>
+
+<div>
+  <h1>Sent Requests</h1>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Status</th>
+    <th>To</th>
+    <th>Date Sent</th>
+    <th>Cancel</th>
+  </tr>
+
+<% @outgoing_requests.each do |request| %>
+    <tr>
+      <td><%= request.status %></td>
+      <td><%= request.to.username.upcase %></td>
+      <td><%= request.created_at %></td>
+      <% if request.status == "accepted" %>
+      <td><%= link_to 'Send email', request.to.email %>
+      <% else %>
+      <td><%= link_to 'Cancel', cancel_contact_request_path(request), method: :destroy, class: "btn btn-primary"  %></td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
+</div>
+
+<div>
+  <h1>Accepted Requests</h1>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Status</th>
+    <th>To</th>
+    <th>To Email</th>
+    <th>From</th>
+    <th>From Email</th>
+    <th>Show Dog</th>
+  </tr>
+
+<% @accepted_requests.each do |request| %>
+    <tr>
+      <td><%= request.status %></td>
+      <td><%= request.to.username %></td>
+      <td><%= request.to.email %></td>
+      <td><%= request.from.username %></td>
+      <td><%= request.from.email %></td>
+      <% other = (request.from == current_user ? request.to : request.from)  %>
+      <td><%= link_to 'Show Dog', user_path(other), class: "btn btn-primary"  %></td>
+    </tr>
+    <% end %>
+</table>
+</div>
+
+
+
+
+
+

@@ -4,7 +4,7 @@ Doggydating::Application.routes.draw do
   #   get 'users', :to => 'users#show', :as => :user_root
   # end
 
-  resources :users, only: [] do
+  resources :users, only: [:show] do
     post "contact_request", to: "contact_requests#create"
   end
 
@@ -16,7 +16,7 @@ Doggydating::Application.routes.draw do
     post "/cancel", to: "contact_requests#cancel", on: :member
   end
   root  to: 'static_pages#home'
-  get '/profile', to: 'users#show', as: :profile
+  get '/profile', to: 'users#profile', as: :profile
 
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'

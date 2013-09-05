@@ -13,7 +13,10 @@
     <div class="container">
 
       <%if current_user%>
-  <%=current_user.email%>
+  <%=current_user.first_name%>
+  <%=current_user.last_name%>
+  a.k.a.
+  "<%=current_user.username.upcase%>"
   <%=link_to "Logout", destroy_user_session_path, method: :delete %>
     <%else%>
       <%=link_to "Sign In", new_user_session_path%> |
