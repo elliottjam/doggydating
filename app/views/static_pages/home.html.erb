@@ -1,8 +1,14 @@
 <div class="center hero-unit">
-    <h1>Doggy Dating App</h1>
+    <h1>Ruff Love</h1>
     <h2>
-      This is the home page for Doggy Dating!
+      Give the dog a bone, dating for dogs!
     </h2>
-
       <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
 </div>
+  <% @dogs.each do |dog| %>
+    <tr>
+      <td><%= image_tag dog.avatar.thumb.url %></td>
+
+    </tr>
+  <% end %>
+</table>
