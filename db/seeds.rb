@@ -72,6 +72,9 @@ dogs = Dog.create! ([
   {
   name: "Snoopy", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Dog Bowl", user_id: users[4].id, avatar: File.new("db/fixtures/rare9.jpg")
   },
+    {
+  name: "Snoopy", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Dog Bowl", user_id: users[4].id, avatar: File.new("db/fixtures/rare10.jpg")
+  },
 ])
 
 # breeds = Breed.create! ([
