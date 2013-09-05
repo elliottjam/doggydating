@@ -1,27 +1,12 @@
 <footer class="footer">
-
-  <divclass='login'>
-  <%if current_user%>
-  <%=current_user.email%>
-  <%=link_to "Logout", destroy_user_session_path, method: :delete %>
-    <%else%>
-      <%=link_to "SignIn", new_user_session_path%> |
-      <%=link_to "Register", new_user_registration_path%> |
-      <%=link_to "Sign in with Google",user_omniauth_authorize_path(:google_oauth2)%>
-  <%end%>
-
-<pclass="notice"><%=notice%></p>
-<pclass="alert"><%=alert%></p
-</div>
-
   <small>
-    Website Design by James Elliott
+    Website Design by <a href="http://www.linkedin.com/in/1james1">James Elliott</a>
   </small>
   <nav>
     <ul>
       <li><%= link_to "About",  about_path %></li>
       <li><%= link_to "Contact", contact_path %></li>
-      <li><%= link_to "News", '#' %></li>
+      <li><%= link_to "News", news_path %></li>
     </ul>
   </nav>
 </footer>
