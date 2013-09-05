@@ -46,31 +46,31 @@ end
 
 dogs = Dog.create! ([
 {
-  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Pig Ear", user_id: users[0].id  , avatar: File.new("db/fixtures/britbulldog.jpeg")
+  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Pig Ear", user_id: users[0].id  , avatar: File.new("db/fixtures/rare1.jpg")
   },
 {
-  name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: users[1].id, avatar: File.new("db/fixtures/coolbru.jpg")
+  name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: users[1].id, avatar: File.new("db/fixtures/rare3.jpg")
   },
   {
-  name: "Sir Pepper", breed_id: Breed.first.id, size: "medium", gender: "male", age: 2, toy: "Daily Growl", user_id: users[2].id, avatar:  File.new("db/fixtures/monocledog.jpg")
+  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Daily Growl", user_id: users[2].id, avatar:  File.new("db/fixtures/rare3azawakhs.JPG")
   },
   {
-  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Rope Pull", user_id: users[3].id, avatar: File.new("db/fixtures/husky.jpg")
+  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Rope Pull", user_id: users[3].id, avatar: File.new("db/fixtures/rare4.png")
   },
   {
-  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: users[4].id, avatar: File.new("db/fixtures/wassup.jpeg")
+  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: users[4].id, avatar: File.new("db/fixtures/rare5.jpg")
   },
   {
-  name: "Buster", breed_id: Breed.first.id, size: "medium", gender: "male", age: 7, toy: "Tennis Ball", user_id: users[4].id, avatar: File.new("db/fixtures/frenchbulldog.jpeg")
+  name: "Buster", breed_id: Breed.first.id, size: "medium", gender: "male", age: 7, toy: "Tennis Ball", user_id: users[4].id, avatar: File.new("db/fixtures/rare6.jpg")
   },
   {
-  name: "Goose", breed_id: Breed.first.id, size: "medium", gender: "male", age: 1, toy: "Daily Growl", user_id: users[4].id, avatar: File.new("db/fixtures/ugly_dogs_01.jpg")
+  name: "Goose", breed_id: Breed.first.id, size: "medium", gender: "male", age: 1, toy: "Daily Growl", user_id: users[4].id, avatar: File.new("db/fixtures/rare7.jpg")
   },
   {
-  name: "Trigger", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Tennis Ball", user_id: users[4].id, avatar: File.new("db/fixtures/doginwheat.jpeg")
+  name: "Trigger", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Tennis Ball", user_id: users[4].id, avatar: File.new("db/fixtures/rare8.jpg")
   },
   {
-  name: "Snoopy", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Dog Bowl", user_id: users[4].id, avatar: File.new("db/fixtures/beagleavatar.jpg")
+  name: "Snoopy", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Dog Bowl", user_id: users[4].id, avatar: File.new("db/fixtures/rare9.jpg")
   },
 ])
 

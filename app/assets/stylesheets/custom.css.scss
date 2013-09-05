@@ -12,14 +12,14 @@ $grayMediumLight: #eaeaea;
 
 /* miscellaneous */
 
-.debug_dump {
+/*.debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
 }
-
+*/
 /* universal */
 
 html {
@@ -38,17 +38,33 @@ textarea {
   resize: vertical;
 }
 
+.dogshuffle {
+
+}
+
 .center {
   text-align: center;
+  height: 360px;
+  border: solid;
   h1 {
-    margin-bottom: 10px;
+    color: white; text-shadow: black 0.1em 0.1em 0.3em
+  }
+   h2 {
+    color: white; text-shadow: black 0.1em 0.1em 0.2em
   }
 }
 
+.hero-unit {
+  background-image: image-url("fieldogs.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  padding-top: -30px
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+
 }
 
 h1 {
@@ -56,6 +72,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: black;
 }
 
 h2 {
@@ -64,7 +81,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: black;
 }
 
 p {
@@ -92,8 +109,8 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 18px;
+  padding-top: 2px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
   a {
@@ -178,16 +195,17 @@ input {
 body {
     background-repeat:no-repeat;
     background-attachment:fixed;
-
     background-size: 100% 100%;
-    background-image: image-url("rollingfields.jpg") !important;
-    min-height: 1200px;
+    background-image: image-url("forrest.jpg") !important;
+    min-height: 800px;
 }
 
 #content {
   background: #fff;
   opacity: 0.97;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   border-radius: 5px;
+  border: solid;
 }
+
 
