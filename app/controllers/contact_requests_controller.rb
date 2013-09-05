@@ -6,13 +6,15 @@ class ContactRequestsController < ApplicationController
   end
 
   def create
-    @contact_request = ContactRequest.new(from_id: current_user.id, to_id: params[:user_id], status: "unconfirmed")
+    @contact_request = ContactRequest.create(from_id: current_user.id, to_id: params[:user_id], status: "unconfirmed")
 
-    if @contact_request.save
-      redirect_to root_path
-    else
-      redirect_to root_path
+    respond_to do |format|
+      format.js
+      format.html do
+        redirect_to search_index_path
+      end
     end
+
   end
 
   def reject

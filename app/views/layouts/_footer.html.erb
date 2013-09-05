@@ -5,19 +5,17 @@
   <%=current_user.email%>
   <%=link_to "Logout", destroy_user_session_path, method: :delete %>
     <%else%>
-      <%=link_to "SignIn", new_user_session_path%>
-      <%=link_to "Register", new_user_registration_path%>
-      or
-      <%=link_to "SigninwithGoogle",user_omniauth_authorize_path(:google_oauth2)%>
+      <%=link_to "SignIn", new_user_session_path%> |
+      <%=link_to "Register", new_user_registration_path%> |
+      <%=link_to "Sign in with Google",user_omniauth_authorize_path(:google_oauth2)%>
   <%end%>
 
-</div>
 <pclass="notice"><%=notice%></p>
-<pclass="alert"><%=alert%></p>
+<pclass="alert"><%=alert%></p
+</div>
 
   <small>
-    Website Design
-    by James Elliott
+    Website Design by James Elliott
   </small>
   <nav>
     <ul>

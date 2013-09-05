@@ -47,9 +47,9 @@
       <td><%= dog.size %></td>
       <td><%= dog.age %></td>
       <td><%= dog.toy %></td>
-      <td><%= dog.user.username %></td>
+      <td><%= dog.user.username.upcase %></td>
       <td><%= link_to 'Show', dog %></td>
-      <td><%= link_to 'Contact Owner', user_contact_request_path(dog.user.id), method: :post %></td>
+      <td><%= link_to 'Contact Owner', user_contact_request_path(dog.user.id), remote: true, method: :post, class: "request_#{dog.user.id}" %></td>
     </tr>
   <% end %>
 </table>

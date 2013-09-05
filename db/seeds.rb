@@ -17,11 +17,20 @@ Dog.destroy_all
 
 users = User.create!([
   {
-    first_name: "James", last_name: "Elliott", email: "elliottjam@gmail.com", username: "elliottjam", password: "password", password_confirmation: "password"
+    first_name: "James", last_name: "Elliott", email: "elliottjam@gmail.com", username: "dogdaddy", password: "password", password_confirmation: "password"
   },
   {
     first_name: "Joe", last_name: "Blow", email: "joeblow@gmail.com", username: "jb", password: "password", password_confirmation: "password"
-  }
+  },
+  {
+    first_name: "Snoop", last_name: "Dog", email: "snoopdogg@gmail.com", username: "dogfather", password: "password", password_confirmation: "password"
+  },
+{
+    first_name: "Jim", last_name: "Dashwood", email: "jimdashwood1@gmail.com", username: "JD", password: "password", password_confirmation: "password"
+  },
+{
+    first_name: "Michael", last_name: "Pavling", email: "michael@gmail.com", username: "dogfather", password: "password", password_confirmation: "password"
+  },
  ])
 
 # dogs = Dog.create([
@@ -37,19 +46,19 @@ end
 
 dogs = Dog.create! ([
 {
-  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.first.id, avatar: File.new("db/fixtures/britbulldog.jpeg")
+  name: "Barley", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Pig Ear", user_id: users[0].id  , avatar: File.new("db/fixtures/britbulldog.jpeg")
   },
 {
-  name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: User.first.id, avatar: File.new("db/fixtures/coolbru.jpg")
+  name: "Borris", breed_id: Breed.first.id, size: "medium", gender: "male", age: 3, toy: "Chewy Carrot", user_id: users[1].id, avatar: File.new("db/fixtures/coolbru.jpg")
   },
   {
-  name: "Pepper", breed_id: Breed.first.id, size: "medium", gender: "female", age: 2, toy: "Rope Chew", user_id: User.last.id, avatar:  File.new("db/fixtures/monocledog.jpg")
+  name: "Sir Pepper", breed_id: Breed.first.id, size: "medium", gender: "male", age: 2, toy: "Daily Growl", user_id: users[2].id, avatar:  File.new("db/fixtures/monocledog.jpg")
   },
   {
-  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.last.id, avatar: File.new("db/fixtures/husky.jpg")
+  name: "Bruce", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: users[3].id, avatar: File.new("db/fixtures/husky.jpg")
   },
   {
-  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: User.last.id, avatar: File.new("db/fixtures/wassup.jpeg")
+  name: "Pugwash", breed_id: Breed.first.id, size: "medium", gender: "female", age: 4, toy: "Daily Growl", user_id: users[4].id, avatar: File.new("db/fixtures/wassup.jpeg")
   },
 ])
 
