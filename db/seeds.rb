@@ -29,7 +29,7 @@ users = User.create!([
     first_name: "Jim", last_name: "Dashwood", email: "jimdashwood1@gmail.com", username: "JD", password: "password", password_confirmation: "password"
   },
 {
-    first_name: "Michael", last_name: "Pavling", email: "michael@gmail.com", username: "dogfather", password: "password", password_confirmation: "password"
+    first_name: "Michael", last_name: "Pavling", email: "michael@gmail.com", username: "MP", password: "password", password_confirmation: "password"
   },
  ])
 

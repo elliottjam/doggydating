@@ -13,6 +13,7 @@ group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'pry'
   gem 'pry-rails'
+  gem 'railroady'
 
 end
 
