@@ -37,6 +37,6 @@ Doggydating::Application.configure do
 
   CarrierWave.configure do |config|
   config.storage = :file
-end
+  end
 
 end
