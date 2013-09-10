@@ -23,7 +23,9 @@
     </section>
   </aside>
 </div>
-<td><%= link_to 'Contact Owner', user_contact_request_path(@dog), method: :post %></td> |
-<%= link_to 'Edit', edit_dog_path %> |
-<%= link_to "Back", dogs_path %> |
-<%= link_to "New Dog", new_dog_path %>
+<td>
+  <%= link_to 'Contact Owner', user_contact_request_path(@dog), method: :post %></td> |
+<% if can? :update, @dog %>
+  <%= link_to 'Edit', edit_dog_path %> |
+<% end %>
+<%= link_to "Back", search_index_path %>
