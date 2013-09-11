@@ -50,13 +50,12 @@
 </div>
 
 <div class="row">
-  <aside class="span12">
+  <aside class="span6">
   <h1>Recieved Requests</h1>
 <table class="table table-striped table-bordered table-condensed">
   <tr>
     <th>Status</th>
     <th>From</th>
-    <th>Date Sent</th>
     <th>Reject</th>
     <th>Accept</th>
   </tr>
@@ -65,24 +64,19 @@
     <tr>
       <td><%= request.status %></td>
       <td><%= request.from.username.upcase %></td>
-      <td><%= request.created_at %></td>
       <td><%= link_to "Reject", reject_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
       <td><%= link_to "Accept", accept_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
     </tr>
     <% end unless @incoming_requests.nil?  %>
 </table>
   </aside>
-</div>
 
-
-<div class="row">
   <aside class="span6">
   <h1>Sent Requests</h1>
 <table class="table table-striped table-bordered table-condensed">
   <tr>
     <th>Status</th>
     <th>To</th>
-    <th>Date Sent</th>
     <th>Cancel</th>
   </tr>
 
@@ -90,7 +84,6 @@
     <tr>
       <td><%= request.status %></td>
       <td><%= request.to.username.upcase %></td>
-      <td><%= request.created_at %></td>
       <% if request.status == "accepted" %>
       <td><%= link_to 'Send email', request.to.email %>
       <% else %>
