@@ -26,8 +26,6 @@ class SearchController < ApplicationController
 
       @dogs = Dog.where(search_sql.join(' and '), search_params).where('user_id != ?', current_user.id)
 
-
-
     end
 
   end
