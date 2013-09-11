@@ -3,22 +3,22 @@
 
 <div class="row">
   <div class="span6 offset3">
-<%= form_tag({url: search_index_path}, method: :get) do %>
+    <%= form_tag({url: search_index_path}, method: :get) do %>
 
 
-  <%= label_tag :size, "Size" %>
-  <%= select_tag :size, options_for_select(%w(small medium large), params[:size]), include_blank: true %>
+    <%= label_tag :size, "Size" %>
+    <%= select_tag :size, options_for_select(%w(small medium large), params[:size]), include_blank: true %>
 
 
-  <%= label_tag :gender, "Gender" %>
-  <%= select_tag :gender, options_for_select(%w(male female), params[:gender]), include_blank: true %>
+    <%= label_tag :gender, "Gender" %>
+    <%= select_tag :gender, options_for_select(%w(male female), params[:gender]), include_blank: true %>
 
-  <%= label_tag :breed_id, "Breed" %>
-  <%= select_tag :breed_id, options_for_select(@breeds.map{|b| [b.name, b.id]}, params[:breed_id]), include_blank: true %>
+    <%= label_tag :breed_id, "Breed" %>
+    <%= select_tag :breed_id, options_for_select(@breeds.map{|b| [b.name, b.id]}, params[:breed_id]), include_blank: true %>
 
 
-  <%= submit_tag "search for dogs!", class: "btn btn-primary"   %>
-   </div>
+    <%= submit_tag "search for dogs!", class: "btn btn-primary"   %>
+  </div>
 </div>
 
   <% if @dogs %>
