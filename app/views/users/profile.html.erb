@@ -74,7 +74,7 @@
           <% @incoming_requests.each do |request| %>
             <tr>
               <td><%= request.status %></td>
-              <td><%= request.from.username.upcase %></td>
+              <td><%= request.from.first_name %> <%= request.from.last_name %></td>
               <td><%= request.from_id %>
               <td><%= link_to "Reject", reject_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
               <td><%= link_to "Accept", accept_contact_request_path(request), method: :post, class: "btn btn-primary"  %></td>
@@ -108,7 +108,7 @@
 </div>
 
 <div class="row">
-  <aside class="span6">
+  <div class="span12">
   <h1>Accepted Requests</h1>
 <table class="table table-striped table-bordered table-condensed">
   <tr>
@@ -130,7 +130,7 @@
     </tr>
     <% end unless @accepted_requests.nil? %>
 </table>
-  </aside>
+  </div>
 </div>
 
 
