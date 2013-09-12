@@ -1,21 +1,28 @@
 <% provide(:title,'About') %>
 
-
-
-
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+<div>
     <h1>About</h1>
-    </a>
-    </div>
- <div id="collapseOne" class="accordion-body collapse in">
-      <div class="accordion-inner">
-    <p>
+  </div>
+
+<div class ="row">
+
+  <div class="span4">
+    <img id="map_image" src="https://maps.googleapis.com/maps/api/staticmap?center=51+Wall+Street,NY&zoom=10&size=300x300&sensor=false"/>
+  </div>
+
+  <div class="span4">
+     <p>
       This 'doggy dating app' is the creation of James Elliott and was completed as the final project for General Assemb.ly's WDI Summer 2013 course.
     </p>
-     </div>
-    </div>
+      <h3>Contact Me</h3>
+    <p>
+    </p>
   </div>
+
+
+  <div class ="span4">
+  <%= image_tag("je.jpg", :alt => "JE", size: "275x275", id: "map_image" ) %>
+  </div>
+
+</div>
 

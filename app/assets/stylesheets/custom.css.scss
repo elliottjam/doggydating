@@ -191,7 +191,6 @@ input {
   }
 }
 
-
 body {
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -207,5 +206,15 @@ body {
   border-radius: 5px;
   border: solid;
 }
+
+#map_image {
+  border-style: outset;
+  border-color: #eaeaea;
+  border-width: 5px;
+}
+
+
+
+
 
 
